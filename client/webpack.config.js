@@ -30,13 +30,13 @@ module.exports = () => {
           destination: path.join('icons', 'icons'),
           sizes: [96, 128, 256, 512]
         }]
-      })
+      }),
     ],
 
     module: {
       rules: [{
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"]
+        use: ['style-loader', 'css-loader']
       }],
     },
   };
