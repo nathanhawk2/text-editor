@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "npm run build && cd server && node server.js",
@@ -15,10 +20,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async_hooks": "^1.0.0",
+    "code-mirror-themes": "^1.0.0",
+    "crypto": "^1.0.1",
     "express": "^4.17.1",
-    "manifest": "^0.1.4"
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "idb": "^7.1.1",
+    "if-env": "^1.0.4",
+    "manifest": "^0.1.4",
+    "net": "^1.0.2",
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
+    "querystring": "^0.2.1",
+    "stream": "^0.0.2",
+    "url": "^0.11.0",
+    "workbox-webpack-plugin": "^6.5.4"
   },
   "devDependencies": {
+    "@types/node": "^18.11.9",
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4"
   }

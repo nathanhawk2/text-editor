@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
+const webpack = require('webpack');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = () => {
@@ -32,7 +33,11 @@ module.exports = () => {
         }]
       }),
     ],
-
+    resolve: {
+      fallback: {
+        "fs": false,
+      },
+    },
     module: {
       rules: [{
         test: /\.css$/i,
@@ -41,3 +46,4 @@ module.exports = () => {
     },
   };
 };
+
